@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Work from './pages/Work';
 import Contact from './pages/Contact';
+import Header from './Header';
 import Footer from './Footer';
 
 export default function PortfolioContainer() {
@@ -27,6 +28,7 @@ export default function PortfolioContainer() {
 
   return (
     <div>
+      <Header />
       {/* // TODO: Add a comment describing what we are passing as props
       changing the currentpage from home to another page depending on setCurrentPage */}
       <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} />

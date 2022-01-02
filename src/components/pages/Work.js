@@ -1,4 +1,5 @@
 import React from 'react';
+import Project from './Project';
 import './style.css';
 
 export default function Work() {
@@ -12,27 +13,17 @@ export default function Work() {
               <div class="container">
                 <div class="row">
                   <div class="col-xs-12 col-sm-6">
-                    <div class="card">
-                      <a class="img-card" href="http://aliciachen10.github.io/weather-dashboard">
-                        <img
-                          src="https://github.com/aliciachen10/weather-dashboard/blob/main/assets/mockup.png?raw=true" />
-                      </a>
-                      <div class="card-content">
-                        <h4 class="card-title">
-                          <a href="http://aliciachen10.github.io/weather-dashboard"> Weather Dashboard
-                          </a>
-                        </h4>
-                        <p class="">
-                          Search for weather in any city and obtain current conditions and a five day forecast. 
-                        </p>
-                      </div>
-                      <div class="card-read-more">
-                        <a href="http://github.com/aliciachen10/weather-dashboard"
-                          class="btn btn-link btn-block">
-                          Git Repo
-                        </a>
-                      </div>
-                    </div>
+                    <Project title="Weather Dashboard" repoLink="github.com/aliciachen10/weather-dashboard"
+                    webLink="http://aliciachen10.github.io/weather-dashboard" 
+                    imgsrc="https://github.com/aliciachen10/weather-dashboard/blob/main/assets/mockup.png?raw=true">
+                      Search for weather in any city and obtain current conditions and a five day forecast.
+                    </Project>
+
+                    <Project title="Timed Quiz" repoLink="github.com/aliciachen10/timed-quiz"
+                    webLink="http://aliciachen10.github.io/timed-quiz" 
+                    imgsrc="https://github.com/aliciachen10/weather-dashboard/blob/main/assets/mockup.png?raw=true">
+                      Take a timed coding quiz that records your score and stores it in your browser.
+                    </Project>
                   </div>
                   <div class="col-xs-12 col-sm-6">
                     <div class="card">
@@ -62,28 +53,11 @@ export default function Work() {
                 </div>
                 <div class="row">
                   <div class="col-xs-12 col-sm-6">
-                    <div class="card">
-                      <a class="img-card"
-                        href="http://aliciachen10.github.io/stock-and-crypto-app">
-                        <img
-                          src="https://cloudfront-us-east-1.images.arcpublishing.com/coindesk/XA6KIXE6FBFM5EWSA25JI5YAU4.jpg" />
-                      </a>
-                      <div class="card-content">
-                        <h4 class="card-title">
-                          <a href="http://aliciachen10.github.io/stock-and-crypto-app">Stock and Crypto App
-                          </a>
-                        </h4>
-                        <p class="">
-                          Find out how your stock and crypto has been doing in the last 100 days. Also returns open & close prices.
-                        </p>
-                      </div>
-                      <div class="card-read-more">
-                        <a href="http://github.com/aliciachen10/stock-and-crypto-app"
-                          class="btn btn-link btn-block">
-                          Git Repo
-                        </a>
-                      </div>
-                    </div>
+                    <Project title="Stock and Cryto App" repoLink="github.com/aliciachen10/stock-and-crypto-app"
+                      webLink="http://aliciachen10.github.io/stock-and-crypto-app" 
+                      imgsrc="https://cloudfront-us-east-1.images.arcpublishing.com/coindesk/XA6KIXE6FBFM5EWSA25JI5YAU4.jpg">
+                        Take a timed coding quiz that records your score and stores it in your browser.
+                    </Project>
                   </div>
 
                   <div class="col-xs-12 col-sm-6">

@@ -4,8 +4,6 @@ import React from 'react';
 // we are deconstructing props into { currentPage, handlePageChange }
 function NavTabs({ currentPage, handlePageChange }) {
   return (
-    <>
-    <img src="./images/bg-masthead.jpg" class="hero-hero" alt="masthead"></img>
     <ul className="nav nav-tabs">
       <li className="nav-item">
         <a
@@ -54,7 +52,6 @@ function NavTabs({ currentPage, handlePageChange }) {
         </a>
       </li>
     </ul>
-    </>
   );
 }
 
