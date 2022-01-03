@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './style.css';
 
 // Here we import a helper function that will check if the email is valid
@@ -13,6 +13,19 @@ function Contact() {
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
+  // useEffect(() => {
+  //       if (userName.length < 1) {
+  //         setErrorMessage('Username is invalid.');
+  //   }
+  // }, [userName])
+
+  // useEffect(() => {
+  //       if (!validateEmail(email)) {
+  //     setErrorMessage('Email is invalid.');
+  //     return;
+  //   }
+  // }, [email])
+  
   const handleInputChange = (e) => {
     // Getting the value and name of the input which triggered the change
     const { target } = e;
@@ -24,31 +37,54 @@ function Contact() {
 
     if (inputType === 'email') {
       setEmail(inputValue);
+      console.log(email)
+      console.log(validateEmail(inputValue))
+      if (!validateEmail(inputValue)) {
+        setErrorMessage('Email is invalid.');
+        // We want to exit out of this code block if something is wrong so that the user can correct it
+        // Then we check to see if the password is not valid. If so, we set an error message regarding the password.
+      } else {
+        setErrorMessage('')
+      }
     } else if (inputType === 'userName') {
       setUserName(inputValue);
+      if (!inputValue) {
+        setErrorMessage('Username is invalid.');
+        // We want to exit out of this code block if something is wrong so that the user can correct it
+        // Then we check to see if the password is not valid. If so, we set an error message regarding the password.
+      } else {
+        setErrorMessage('')
+      }
     } else {
       setPassword(inputValue)
+      if (!checkMessage(inputValue)) {
+        setErrorMessage(
+          `Please enter a message`
+        );
+      } else {
+        setErrorMessage('')
+      }
     }
 
-    // First we check to see if the email is not valid or if the userName is empty. If so we set an error message to be displayed on the page.
-    if (!userName) {
-      setErrorMessage('Username is invalid.');
-      // We want to exit out of this code block if something is wrong so that the user can correct it
-      return;
-      // Then we check to see if the password is not valid. If so, we set an error message regarding the password.
-    }
-    if (!validateEmail(email)) {
-      setErrorMessage('Email is invalid.');
-      // We want to exit out of this code block if something is wrong so that the user can correct it
-      return;
-      // Then we check to see if the password is not valid. If so, we set an error message regarding the password.
-    }
-    if (!checkMessage(password)) {
-      setErrorMessage(
-        `Please enter a message`
-      );
-      return;
-    }
+    // // First we check to see if the email is not valid or if the userName is empty. If so we set an error message to be displayed on the page.
+    // if (!userName) {
+    //   setErrorMessage('Username is invalid.');
+    //   // We want to exit out of this code block if something is wrong so that the user can correct it
+    //   return;
+    //   // Then we check to see if the password is not valid. If so, we set an error message regarding the password.
+    // }
+    // if (!validateEmail(email)) {
+    //   setErrorMessage('Email is invalid.');
+    //   // We want to exit out of this code block if something is wrong so that the user can correct it
+    //   return;
+    //   // Then we check to see if the password is not valid. If so, we set an error message regarding the password.
+    // }
+    // if (!checkMessage(password)) {
+    //   setErrorMessage(
+    //     `Please enter a message`
+    //   );
+    //   return;
+    // }
   };
 
   const handleFormSubmit = (e) => {
@@ -56,12 +92,12 @@ function Contact() {
     e.preventDefault();
 
     // First we check to see if the email is not valid or if the userName is empty. If so we set an error message to be displayed on the page.
-    if (!userName) {
-      setErrorMessage('Username is invalid.');
-      // We want to exit out of this code block if something is wrong so that the user can correct it
-      return;
-      // Then we check to see if the password is not valid. If so, we set an error message regarding the password.
-    }
+    // if (!userName) {
+    //   setErrorMessage('Username is invalid.');
+    //   // We want to exit out of this code block if something is wrong so that the user can correct it
+    //   return;
+    //   // Then we check to see if the password is not valid. If so, we set an error message regarding the password.
+    // }
     if (!validateEmail(email)) {
       setErrorMessage('Email is invalid.');
       // We want to exit out of this code block if something is wrong so that the user can correct it
@@ -88,23 +124,23 @@ function Contact() {
       <p>Hello {userName}</p>
       <form className="form">
         <input
-          value={userName}
+          defaultValue={userName}
           name="userName"
-          onChange={handleInputChange}
+          onBlur={handleInputChange}
           type="text"
           placeholder="name"
         />
         <input
-          value={email}
+          defaultValue={email}
           name="email"
-          onChange={handleInputChange}
+          onBlur={handleInputChange}
           type="email"
           placeholder="email"
         />
         <input
-          value={password}
+          defaultValue={password}
           name="password"
-          onChange={handleInputChange}
+          onBlur={handleInputChange}
           type="text"
           placeholder="message"
         />

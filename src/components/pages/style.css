@@ -112,10 +112,16 @@ h1.heading {
   height: 300px;
   width: 100%;
   margin-bottom: 25px;
-  background-image: url("../bg-masthead.jpg"); 
+  /* background-image: url("../bg-masthead.jpg");  */
   background-size: cover;
   background-position: center;
   position: relative;
+}
+
+.hero-hero {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
 }
 
 .subtitle {
@@ -135,4 +141,14 @@ img {
 img {
   max-width: 100%;
   height: auto;
+}
+
+.footer-list li {
+  /* border-bottom: 5px solid #0072bb; */
+  list-style-type: none;
+  /* font-size: 200%; */
+  display: inline;
+  margin-right: 2%;
+  margin-left: 2%;
+  text-align: center;
 }

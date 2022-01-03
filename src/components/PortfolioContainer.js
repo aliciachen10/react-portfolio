@@ -1,25 +1,25 @@
 import React, { useState } from 'react';
-import NavTabs from './NavTabs';
-import Home from './pages/Home';
+import Navigation from './Navigation';
+import Resume from './pages/Resume';
 import About from './pages/About';
-import Work from './pages/Work';
+import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
 import Header from './Header';
 import Footer from './Footer';
 
 export default function PortfolioContainer() {
-  const [currentPage, setCurrentPage] = useState('Home');
+  const [currentPage, setCurrentPage] = useState('About');
 
   // TODO: Add a comment describing the functionality of this method
   const renderPage = () => {
-    if (currentPage === 'Home') {
-      return <Home />;
+    if (currentPage === 'Resume') {
+      return <Resume />;
     }
     if (currentPage === 'About') {
       return <About />;
     }
-    if (currentPage === 'Work') {
-      return <Work />;
+    if (currentPage === 'Portfolio') {
+      return <Portfolio />;
     }
     return <Contact />;
   };
@@ -29,11 +29,7 @@ export default function PortfolioContainer() {
   return (
     <div>
       <Header />
-      {/* // TODO: Add a comment describing what we are passing as props
-      changing the currentpage from home to another page depending on setCurrentPage */}
-      <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} />
-      {/* // TODO: Add a comment explaining what is happening on the following line
-      we are rendering the currentpage depending on what the person puts in */}
+      <Navigation currentPage={currentPage} handlePageChange={handlePageChange} />
       {renderPage()}
       <Footer />
     </div>

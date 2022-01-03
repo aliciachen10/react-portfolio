@@ -3,15 +3,10 @@ import React from 'react';
 export default function About() {
   return (
     <div>
-      <h1>About Page</h1>
-      <p>
-        Nunc pharetra finibus est at efficitur. Praesent sed congue diam.
-        Integer gravida dui mauris, ut interdum nunc egestas sed. Aenean sed
-        mollis diam. Nunc aliquet risus ac finibus porta. Nam quis arcu non
-        lectus tincidunt fermentum. Suspendisse aliquet orci porta quam semper
-        imperdiet. Praesent euismod mi justo, faucibus scelerisque risus cursus
-        in. Sed rhoncus mollis diam, sit amet facilisis lectus blandit at.
-      </p>
+      <h1>About</h1>
+      <p>Alicia is a data scientist and aspiring full-stack MLOps engineer with a background in healthcare analytics, health intervention research, and mental health. 
+        Her business interests lie in entrepreneurship, behavioral health change, and supporting mental health clinicians and their clients. 
+        In her free time, she enjoys rock climbing, reading, lifting, meditating, and hiking.</p>
     </div>
   );
 }
