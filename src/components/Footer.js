@@ -7,11 +7,13 @@ function Footer({ currentPage, handlePageChange }) {
   return (
     <>
     <br></br>
+    <hr></hr>
     <ul className='footer-list'>
       <li><a href="http://www.github.com/aliciachen10">Github</a></li>
       <li><a href="http://www.linkedin.com/in/alicia--chen">LinkedIn</a></li>
       <li><a href="https://en.gravatar.com/hiddencyclist">Gravatar</a></li>
     </ul>
+    <center>&copy; Sloths United</center>
     </>
   );
 }

@@ -49,7 +49,7 @@ function Contact() {
     } else if (inputType === 'userName') {
       setUserName(inputValue);
       if (!inputValue) {
-        setErrorMessage('Username is invalid.');
+        setErrorMessage('Please enter your name.');
         // We want to exit out of this code block if something is wrong so that the user can correct it
         // Then we check to see if the password is not valid. If so, we set an error message regarding the password.
       } else {
@@ -120,29 +120,30 @@ function Contact() {
   };
 
   return (
-    <div>
-      <p>Hello {userName}</p>
+    <div className="indent">
+      {/* <p>Hello {userName}</p> */}
+      <h1>Contact Me</h1>
       <form className="form">
         <input
           defaultValue={userName}
           name="userName"
           onBlur={handleInputChange}
           type="text"
-          placeholder="name"
+          placeholder="name (such as Sloth Slothington)"
         />
         <input
           defaultValue={email}
           name="email"
           onBlur={handleInputChange}
           type="email"
-          placeholder="email"
+          placeholder="email (such as slothsholdinghands@forever.com)"
         />
         <input
           defaultValue={password}
           name="password"
           onBlur={handleInputChange}
           type="text"
-          placeholder="message"
+          placeholder="message (such as we love sloths and support them)"
         />
         {/* TODO Add another input field with a value, name, type, and placeholder of "password" */}
         {/* TODO Add a `onChange` attribute with a value of `handleInputChange` */}

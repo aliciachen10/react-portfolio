@@ -4,7 +4,7 @@ import './style.css';
 
 export default function Portfolio() {
   return (
-    <div>
+    <div className="indent">
       <h1>Portfolio</h1>
       <div class="col-12 col-md-8 col-xl-9">
         <section class="wrapper">

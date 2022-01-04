@@ -26,6 +26,10 @@ body {
   width: 100%;
 }
 
+.indent {
+  margin: 2%
+}
+
 .container-fostrap {
   display: table-cell;
   padding: 1em;
@@ -143,6 +147,11 @@ img {
   height: auto;
 }
 
+ol, ul {
+  padding-left: 2rem;
+  text-align: center;
+}
+
 .footer-list li {
   /* border-bottom: 5px solid #0072bb; */
   list-style-type: none;
@@ -151,4 +160,22 @@ img {
   margin-right: 2%;
   margin-left: 2%;
   text-align: center;
+}
+
+.profile-pic {
+  height: 10%;
+  width: 10%
+}
+a:link {
+  color: rgb(95, 95, 190);
+  text-decoration:none;
+}
+
+a:visited {
+  color: rgb(95, 95, 190);
+  text-decoration:none;
+}
+
+hr {
+  border-top: 1px dotted;
 }

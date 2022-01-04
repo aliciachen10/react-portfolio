@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Resume() {
   return (
-    <div>
+    <div className="indent">
       <h1>Resume</h1>
       <p>
         View my resume <a href="https://drive.google.com/file/d/1Wx0W4OzXfumyfJDbmKt0QGP8eadGWWfo/view?usp=sharin">here</a>.
